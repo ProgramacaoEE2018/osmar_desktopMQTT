@@ -7,7 +7,7 @@ Esse projeto tem como objetivo o desenvolvimento de um software para controle de
 - [x] Diagrama de classes e relacionamentos (fluxograma,digrama de classes e relacionamentos via EA ou Doxygen)
 - [x] Escolha da biblioteca gráfica
 - [x] Esboço GUI
-- [ ] Código Funcional
+- [x] Código Funcional (em parte)
 
 ## Documentação
 #### Diagrama de Classses
@@ -20,4 +20,11 @@ O tutorial escolhido para a implementação do código no formato **QT** foi o d
 #### Esboço GUI
 ![Esboço GUI](/documentos/draftGUI.png)
 
-A aplicação permite a configuração do usuário e endereço do servidor *broker* via linha de texto, com cada configuração da conexão indicado. Com a conexão feita, o *label* em vermelho se tornará verde e escrito CONECTADO, e o usuário poderá escolher o comando a ser dado a Lâmpada cujas configurações serão inseridas na parte inferior aos botões.
+
+## Instrução de compilação para Windows 10 32-bits
+
+Para compilação do programa na pasta MQTT_GUI, foi utilizado QT Creator 4.6.1 com o kit MinGW 5.3.0 , logo será necessário a instalação do mesmo. Para tal é necessário a seleção do projeto MQTT_GUI.pro que estará incluido os arquivos necessários. Após isso será necessário fazer o *build* do projeto, que será montado em um diretório de acordo com a configuração do QT Creator. Agora utilizando o *QT 5.10.1 for Desktop* deve-se ir a pasta onde o executável foi montado e digitar "windeployqt.exe --quick --no-translations ." o que fará instalar as dependências do executável. Com isso o programa estará pronto para ser executado.
+
+## Utilização do programa
+
+Para utilização do programa deve ser colocado o usuário e senha do mesmo no primeiro box, e o endereço do servidor e porta no segundo box. Apertando o botão conectar o programa tentará fazer a conexão com o servidor. No momento essa funcionalidade não está disponível, sendo no lugar mostrado com um MensageBox as informações que seriam utilizadas para tal conexão. Em caso de conexão o status muda, mostrando Conectado, e o botão assume a função de desconexão. Com a conexão estabelecida, os comandos para lâmpada podem ser acionados, de acordo com o QoS (Quality of Service ou Qualidade de Serviço, que indica o tipo de mensagem que quer ser enviada de acordo com os padrões MQTT) e o tópico/endereço da mensagem no servidor. Essa funcionalidade também no momento não está implementada, sendo assim mostrado a ação que seria enviada para o Servidor (ligar, desligar ou trocar o estado) através de um MensageBox.
