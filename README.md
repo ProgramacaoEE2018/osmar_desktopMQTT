@@ -1,13 +1,9 @@
 # Desktop MQTT
-## Descrição
-Esse projeto tem como objetivo o desenvolvimento de um software para controle de cargas (lâmpadas, motores) remotamente via um servidor *broker* MQTT, utilizando conceitos de Internet das Coisas, para aprendizado e implementação de solução válida.
 
-## Passos
-- [x] Criaçao do repositório e README
-- [x] Diagrama de classes e relacionamentos (fluxograma,digrama de classes e relacionamentos via EA ou Doxygen)
-- [x] Escolha da biblioteca gráfica
-- [x] Esboço GUI
-- [x] Código Funcional (em parte)
+## Descrição
+O programa tem como objetivo a conexão a um servidor MQTT local ou remoto, através de um cliente para acionamento de uma carga binária (ligado/desligado), no caso uma lâmpada.
+## Motivação
+Com o desenvolvimento do programa, é possivel o aprimoramento futuro de técnicas de manipulação de dados e automação a partir dos protocolos utilizados aqui, aprofundando assim o conhecimento de Internet das Coisas, para o desenvolvimentos de novas tecnologias nessa área.
 
 ## Documentação
 #### Diagrama de Classses
